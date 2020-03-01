@@ -28,7 +28,7 @@ Base = declarative_base()
 class User(Base):
     __tablename__ = 'user'
 
-    id = sa.Column(sa.String(36), primary_key=True)
+    id = sa.Column(sa.INTEGER, primary_key=True)
     first_name = sa.Column(sa.Text)
     last_name = sa.Column(sa.Text)
     gender = sa.Column(sa.Text)
@@ -46,7 +46,7 @@ def connect_db():
 
 def request_data():
     print("Пишу данные")
-    user_id = str(uuid.uuid4())
+    #user_id = str(uuid.uuid4())
     first_name = input("Имя: ")
     last_name = input("Фамилия: ")
     gender = input("Пол (Male/Female): ")
@@ -54,7 +54,7 @@ def request_data():
     birthdate = input("Дата рождения (ГГГГ-ММ-ДД): ")
     height = input("Рост: ")
     user = User(
-        id=user_id,
+        #id=user_id,
         first_name=first_name,
         last_name=last_name,
         gender=gender,
