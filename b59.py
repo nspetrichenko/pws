@@ -15,8 +15,15 @@ def time_this(RUNS=10):
 
     return decorator
 
-@time_this(2)
-def f():
-    for j in range(1000000):
-        pass
-f()
+@time_this(3)
+def fib(N):
+    a = 1
+    b = 2
+    sq = [1]
+    for i in range(1, N):
+        res = a + b
+        a = b
+        b = res
+        sq.append(a)
+    return sq
+fib(100_000)
