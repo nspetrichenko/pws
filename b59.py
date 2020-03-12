@@ -15,7 +15,7 @@ def time_this(RUNS=10):
 
     return decorator
 
-@time_this()
+@time_this(2)
 def f():
     for j in range(1000000):
         pass
