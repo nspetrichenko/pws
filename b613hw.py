@@ -34,8 +34,6 @@ from bottle import run
 from bottle import HTTPError
 from bottle import request
 
-import json
-
 DB_PATH = "sqlite:///albums.sqlite3"
 Base = declarative_base()
 
